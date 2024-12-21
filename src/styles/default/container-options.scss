@@ -1,0 +1,11 @@
+//? Размеры макета
+$max-width: 1920; // Ширина полотна (макета)
+$container-max-width: 1280; // Ширина ПК контейнера
+$container-min-width: 320px; // Минимальная ширина страницы
+$container-default-padding: 80px;
+
+[class*="__container"] {
+  max-width: $container-max-width + $container-default-padding * 2;
+  margin: 0 auto;
+  padding: 0 $container-default-padding;
+}

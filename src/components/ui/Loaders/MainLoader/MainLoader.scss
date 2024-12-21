@@ -1,0 +1,35 @@
+.loader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: inline-block;
+  @include Pl-b48;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "CinemaGuid is loading";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    color: transparent;
+    background: linear-gradient(93.4deg, #6a5dc2 18.78%, #dc5dfc 81.26%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    box-sizing: border-box;
+    animation: animloader 5s ease-in-out infinite;
+    white-space: nowrap;
+  }
+}
+
+@keyframes animloader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,17 @@
+.top-movies {
+  // .top-movies__inner
+  &__inner {
+    padding: 40px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 64px;
+    }
+  }
+}

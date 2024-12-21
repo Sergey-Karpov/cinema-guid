@@ -1,0 +1,34 @@
+@use "@/styles/main.scss";
+
+body {
+  background-color: $main-bg;
+
+  * {
+    color: $text-color;
+  }
+
+  &.block-scroll {
+    overflow: hidden;
+  }
+}
+
+section {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  min-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.error-text {
+  @include Pl-r18;
+  color: $red;
+}

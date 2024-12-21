@@ -1,0 +1,47 @@
+$ff_Pr: "Play-Regular", sans-serif;
+$ff_Pb: "Play-Bold", sans-serif;
+$ff_OSb: "OpenSans-Bold", sans-serif;
+
+// Play bold
+@mixin Pl-b48 {
+  font-family: $ff_Pb;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+@mixin Pl-b40 {
+  font-family: $ff_Pb;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+@mixin Pl-b24 {
+  font-family: $ff_Pb;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@mixin Pl-b18 {
+  font-family: $ff_Pb;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+// Play regular
+@mixin Pl-r24 {
+  font-family: $ff_Pr;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+@mixin Pl-r18 {
+  font-family: $ff_Pr;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}

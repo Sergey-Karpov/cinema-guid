@@ -1,0 +1,32 @@
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 16px;
+
+  // .rating-display--red
+  &--red {
+    background-color: $red;
+  }
+
+  // .rating-display--grey
+  &--grey {
+    background-color: $grey;
+  }
+
+  // .rating-display--green
+  &--green {
+    background-color: $green;
+  }
+
+  // .rating-display--gold
+  &--gold {
+    background-color: $gold;
+  }
+
+  // .rating-display__rate
+  &__rate {
+    @include Pl-b18;
+  }
+}

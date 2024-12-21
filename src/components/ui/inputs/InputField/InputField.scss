@@ -1,0 +1,44 @@
+.main-input {
+  position: relative;
+  width: 100%;
+
+  &.main-input--error {
+    input {
+      border-color: $error;
+    }
+
+    svg {
+      path {
+        fill: $error;
+      }
+    }
+  }
+
+  input {
+    padding: 16px 16px 16px 52px;
+    width: 100%;
+    @include Pl-r18;
+    color: $black;
+    border: 1px solid $content-placeholder;
+    border-radius: 8px;
+    @include defaultTransition;
+
+    &::placeholder {
+      @include Pl-r18;
+      color: $content-placeholder;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    path {
+      fill: $content-placeholder;
+      fill-opacity: 1;
+      @include defaultTransition;
+    }
+  }
+}

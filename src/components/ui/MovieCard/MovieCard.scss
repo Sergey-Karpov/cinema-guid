@@ -1,0 +1,38 @@
+.movie-card {
+  position: relative;
+  width: 224px;
+  height: 336px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 80px 0px #ffffff54;
+  @include defaultTransition;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  // .movie-card__inner
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  // .movie-card__number
+  &__number {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background-color: $white;
+    color: $background-brand-active;
+    @include Pl-b24;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

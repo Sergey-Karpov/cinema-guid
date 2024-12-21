@@ -1,0 +1,59 @@
+.reg-form {
+  // .reg-form__inner
+  &__inner {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  h3 {
+    align-self: center;
+    @include Pl-b24;
+    color: $black;
+  }
+
+  // .reg-form__inputs
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  // .reg-form__loader
+  &__loader {
+    position: relative;
+  }
+
+  .error-text {
+    max-width: 28rem;
+    text-align: center;
+  }
+}
+
+.reg-success {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+
+    span {
+      display: block;
+      text-align: center;
+      @include Pl-b24;
+      color: $black;
+    }
+
+    p {
+      max-width: 340px;
+      display: block;
+      text-align: center;
+      @include Pl-r24;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.genres {
+  // .genres__inner
+  &__inner {
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 64px;
+    }
+  }
+}

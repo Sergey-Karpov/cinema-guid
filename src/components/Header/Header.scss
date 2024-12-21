@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+
+  // class="header__inner"
+  &__inner {
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  // .header__centre
+  &__centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .header__actions
+  &__actions {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  // .header__nav
+  &__nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      li {
+        @include Pl-r24;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // .header__search
+  &__search {
+    min-width: 550px;
+  }
+}

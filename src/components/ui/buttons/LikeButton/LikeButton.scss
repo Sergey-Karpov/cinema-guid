@@ -1,0 +1,10 @@
+.like-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: $background-secondary;
+  border-radius: 28px;
+  @include Pl-b18;
+}

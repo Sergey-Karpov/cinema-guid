@@ -1,0 +1,19 @@
+.main-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 48px;
+  border-radius: 28px;
+  @include Pl-b18;
+
+  // .main-button--purple
+  &--purple {
+    background-color: $purple;
+  }
+
+  // .main-button--grey
+  &--grey {
+    background-color: $background-secondary;
+  }
+}

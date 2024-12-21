@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.3;
+
+  &__container {
+    height: 100%;
+  }
+
+  // .hero__inner
+  &__inner {
+    padding: 200px 0 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  // .hero__bg
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    background-position: top right;
+    filter: brightness(0.5);
+  }
+}
+
+.movie-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 60%;
+
+  // .movie-data__info
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  // .movie-data__release
+  &__release {
+    @include Pl-r18;
+    color: $content-secondary;
+  }
+
+  // .movie-data__genre
+  &__genre {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    li {
+      @include Pl-r18;
+      color: $content-secondary;
+    }
+  }
+
+  // .movie-data__runtime
+  &__runtime {
+    @include Pl-r18;
+    color: $content-secondary;
+  }
+
+  // .movie-data__description
+  &__description {
+    margin-bottom: 16px;
+    @include Pl-r24;
+    color: $content-secondary;
+  }
+
+  // .movie-data__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

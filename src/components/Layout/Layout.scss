@@ -1,0 +1,6 @@
+.layout {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(90vh, 1fr) auto;
+  width: 100%;
+}
