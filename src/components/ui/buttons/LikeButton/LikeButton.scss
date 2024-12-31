@@ -7,4 +7,15 @@
   background-color: $background-secondary;
   border-radius: 28px;
   @include Pl-b18;
+
+  // .like-button--active
+  // &--active {
+  //   svg {
+  //     fill: $red;
+
+  //     path {
+  //       fill: $red;
+  //     }
+  //   }
+  // }
 }

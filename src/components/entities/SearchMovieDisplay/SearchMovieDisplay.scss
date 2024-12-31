@@ -1,0 +1,43 @@
+.result-movie {
+  padding: 20px 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+
+  // .result-movie__poster
+  &__poster {
+    max-width: 40px;
+    max-height: 52px;
+  }
+
+  // .result-movie__description
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  // .result-movie__top
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include Pl-r14;
+    color: $white;
+    opacity: 0.7;
+
+    .rating-display {
+      padding: 2px 8px;
+
+      // .rating-display__rate
+      &__rate {
+        @include Pl-b12;
+      }
+    }
+  }
+
+  h4 {
+    @include Pl-b18;
+  }
+}

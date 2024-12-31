@@ -1,4 +1,4 @@
-import MovieCard from "@/components/ui/MovieCard/MovieCard";
+import MovieCard from "@/components/entities/MovieCard/MovieCard";
 import SectionTitle from "@/components/ui/titles/SectionTitle/SectionTitle";
 import { MovieType } from "@/types/movieSchema";
 import React from "react";

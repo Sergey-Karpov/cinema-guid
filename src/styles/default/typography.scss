@@ -31,6 +31,13 @@ $ff_OSb: "OpenSans-Bold", sans-serif;
   font-weight: 700;
 }
 
+@mixin Pl-b12 {
+  font-family: $ff_Pb;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
 // Play regular
 @mixin Pl-r24 {
   font-family: $ff_Pr;
@@ -43,5 +50,12 @@ $ff_OSb: "OpenSans-Bold", sans-serif;
   font-family: $ff_Pr;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin Pl-r14 {
+  font-family: $ff_Pr;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 400;
 }

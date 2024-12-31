@@ -1,0 +1,53 @@
+.setting-user {
+  // .setting-user__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  // .setting-user__left
+  &__left {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    border-radius: 50%;
+    @include Pl-b24;
+  }
+
+  // .setting-user__right
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  // .setting-user__prop
+  &__prop {
+    @include Pl-r18;
+  }
+
+  // .setting-user__value
+  &__value {
+    @include Pl-b24;
+  }
+}

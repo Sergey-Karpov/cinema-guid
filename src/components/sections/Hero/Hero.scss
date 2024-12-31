@@ -3,8 +3,55 @@
   width: 100%;
   aspect-ratio: 2.3;
 
+  @include media-tablet {
+    aspect-ratio: 1.8;
+  }
+
+  @include media-mobile-large {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  &--short-description {
+    .movie-data__description {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+    }
+
+    .movie-data__actions {
+      @include media-mobile {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+      }
+
+      & * {
+        &:nth-child(1) {
+          @include media-mobile {
+            grid-column: span 4;
+          }
+        }
+
+        &:nth-child(2) {
+          @include media-mobile {
+            grid-column: span 2;
+          }
+        }
+      }
+    }
+  }
+
   &__container {
     height: 100%;
+
+    @include media-mobile-large {
+      height: fit-content;
+    }
   }
 
   // .hero__inner
@@ -15,6 +62,11 @@
     justify-content: center;
     align-items: flex-start;
     height: 100%;
+
+    @include media-mobile-large {
+      padding: 24px 0;
+      height: fit-content;
+    }
   }
 
   // .hero__bg
@@ -28,6 +80,14 @@
     object-fit: cover;
     background-position: top right;
     filter: brightness(0.5);
+
+    @include media-tablet {
+      background-position: center center;
+    }
+
+    @include media-mobile-large {
+      position: static;
+    }
   }
 }
 
@@ -38,11 +98,20 @@
   gap: 16px;
   max-width: 60%;
 
+  @include media-tablet {
+    max-width: 100%;
+  }
+
   // .movie-data__info
   &__info {
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @include media-mobile-large {
+      gap: 12px;
+      flex-wrap: wrap;
+    }
   }
 
   // .movie-data__release
@@ -61,6 +130,10 @@
       @include Pl-r18;
       color: $content-secondary;
     }
+
+    @include media-mobile-large {
+      @include Pl-r14;
+    }
   }
 
   // .movie-data__runtime
@@ -74,6 +147,10 @@
     margin-bottom: 16px;
     @include Pl-r24;
     color: $content-secondary;
+
+    @include media-mobile-large {
+      @include Pl-r18;
+    }
   }
 
   // .movie-data__actions
@@ -81,5 +158,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @include media-mobile {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      width: 100%;
+    }
   }
 }

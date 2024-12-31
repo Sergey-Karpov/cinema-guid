@@ -1,5 +1,4 @@
-import { getGenres } from "@/api/api";
-import GenreCard from "@/components/ui/GenreCard/GenreCard";
+import GenreCard from "@/components/entities/GenreCard/GenreCard";
 import SectionTitle from "@/components/ui/titles/SectionTitle/SectionTitle";
 import { GenresType } from "@/types/genresShema";
 import React from "react";

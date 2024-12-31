@@ -13,4 +13,11 @@
     align-items: stretch;
     gap: 12px;
   }
+
+  // .login-form__error
+  &__error {
+    text-align: center;
+    @include Pl-b18;
+    color: $red;
+  }
 }

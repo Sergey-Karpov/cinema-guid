@@ -1,0 +1,67 @@
+$laptop: 1400px;
+$tablet: 1200px;
+$mobile-large: 992px;
+$mobile: 768px;
+$mobile-small: 376px;
+$mobile-min: 320px;
+
+@mixin defaultTransition {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin hoverBorder {
+  @include defaultTransition;
+
+  &:is(:hover, :focus) {
+    border-bottom: 1.5px solid rgba(106, 93, 194, 1);
+  }
+}
+
+@mixin absolute-centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin child-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin media-laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin media-mobile-large {
+  @media screen and (max-width: $mobile-large) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin media-mobile-small {
+  @media screen and (max-width: $mobile-small) {
+    @content;
+  }
+}
+
+@mixin media-mobile-min {
+  @media screen and (max-width: $mobile-min) {
+    @content;
+  }
+}

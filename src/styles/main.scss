@@ -1,5 +1,5 @@
-@use "@/styles/default/reset.scss";
-@use "@/styles/default/colors.scss";
+@use "@/styles/default/reset.scss" as *;
+@use "@/styles/default/colors.scss" as *;
 
 @mixin font-face($font-family, $weight, $style) {
   @font-face {

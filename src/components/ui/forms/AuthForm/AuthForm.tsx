@@ -4,32 +4,11 @@ import RegistrationForm from "../RegistrationForm/RegistrationForm";
 import RegSuccess from "../RegSuccess/RegSuccess";
 import "./AuthForm.scss";
 import logo from "/images/logo.svg";
-import { fetchProfile } from "@/api/api";
-import { useQuery } from "@tanstack/react-query";
 
 export type LoginStateType = "login" | "registration" | "success";
 
 const AuthForm: React.FC = () => {
   const [formState, setFormState] = useState<LoginStateType>("login");
-
-  // Использование useQuery здесь, в React-компоненте
-  const meQuery = useQuery({
-    queryFn: () => fetchProfile(),
-    queryKey: ["users", "me"],
-    retry: false,
-    enabled: false, // Отключаем автоматический запуск
-  });
-
-  const account = async () => {
-    try {
-      await meQuery.refetch(); // Явный вызов запроса
-      if (meQuery.status === "success") {
-        console.log("Профиль пользователя:", meQuery.data);
-      }
-    } catch (error) {
-      console.error("Ошибка при получении данных профиля:", error);
-    }
-  };
 
   const handlerSwitchForm = (state: LoginStateType) => {
     setFormState(state);
@@ -40,7 +19,7 @@ const AuthForm: React.FC = () => {
       case "login":
         return (
           <>
-            <LoginForm onSuccessLog={account} />
+            <LoginForm />
             <button
               onClick={() => handlerSwitchForm("registration")}
               className="auth-form__change-form-btn"

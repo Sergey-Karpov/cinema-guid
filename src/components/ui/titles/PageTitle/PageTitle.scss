@@ -1,4 +1,8 @@
 .page-title {
   @include Pl-b48;
   @include defaultTransition;
+
+  @include media-mobile-large {
+    @include Pl-b24;
+  }
 }

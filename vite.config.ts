@@ -16,10 +16,10 @@ export default defineConfig({
       scss: {
         api: "modern",
         additionalData: `
-          @use "@/styles/default/variables.scss" as *;
           @use "@/styles/default/typography.scss" as *;
           @use "@/styles/default/container-options.scss" as *;
           @use "@/styles/default/colors.scss" as *;
+          @use "@/styles/default/mixins.scss" as *;
         `,
       },
     },

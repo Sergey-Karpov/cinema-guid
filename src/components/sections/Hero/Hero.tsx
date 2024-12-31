@@ -1,8 +1,10 @@
+import MoviePlayer from "@/components/entities/MoviePlayer/MoviePlayer";
 import LikeButton from "@/components/ui/buttons/LikeButton/LikeButton";
 import LinkButton from "@/components/ui/buttons/LinkButton/LinkButton";
 import MainButton from "@/components/ui/buttons/MainButton/MainButton";
 import RestartButton from "@/components/ui/buttons/RestartButton/ReatartButton";
 import MainLoader from "@/components/ui/Loaders/MainLoader/MainLoader";
+import { useModal } from "@/components/ui/Modals/ModalContext";
 import { RatingDisplay } from "@/components/ui/RatingDisplay/RatingDisplay";
 import PageTitle from "@/components/ui/titles/PageTitle/PageTitle";
 import { MovieType } from "@/types/movieSchema";
@@ -15,6 +17,7 @@ interface HeroProps {
   movieData?: MovieType;
   onRestart?: () => void;
   isLoading: boolean;
+  modifierClass?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -22,13 +25,18 @@ const Hero: React.FC<HeroProps> = ({
   onRestart,
   page,
   isLoading,
+  modifierClass,
 }) => {
+  const { openModal } = useModal();
+
   const startTrailer = () => {
-    console.log("awd");
+    openModal(<MoviePlayer url={movieData?.trailerUrl} />);
   };
 
   return (
-    <section className="hero">
+    <section
+      className={`hero ${modifierClass ? `hero--${modifierClass}` : ""}`}
+    >
       <div className="hero__container">
         <div className="hero__inner">
           {isLoading ? (
@@ -65,7 +73,7 @@ const Hero: React.FC<HeroProps> = ({
                       path={`/movie/${movieData.id}`}
                     />
                   )}
-                  <LikeButton onClick={startTrailer} />
+                  <LikeButton id={movieData.id.toString()} />
                   {onRestart && <RestartButton onClick={onRestart} />}
                 </div>
               </div>
@@ -73,11 +81,17 @@ const Hero: React.FC<HeroProps> = ({
           )}
         </div>
       </div>
-      {movieData?.backdropUrl && (
+      {movieData?.backdropUrl ? (
         <img
           className="hero__bg"
           src={movieData.backdropUrl}
           alt={movieData.originalTitle}
+        />
+      ) : (
+        <img
+          className="hero__bg"
+          src="../../../../public/images/no-preview.jpg"
+          alt="Изображение превью фильма"
         />
       )}
     </section>

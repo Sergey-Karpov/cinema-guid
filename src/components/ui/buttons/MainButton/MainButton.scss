@@ -6,6 +6,12 @@
   padding: 16px 48px;
   border-radius: 28px;
   @include Pl-b18;
+  flex-shrink: 0;
+  min-width: max-content;
+
+  @include media-mobile {
+    padding: 16px 20px;
+  }
 
   // .main-button--purple
   &--purple {

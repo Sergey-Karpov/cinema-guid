@@ -41,6 +41,7 @@ const HomePage: React.FC = () => {
         onRestart={refetchMovie}
         page={"home"}
         isLoading={randomMovieIsLoading}
+        modifierClass="short-description"
       />
       {topTenData ? (
         <TopTenMovies topTenData={topTenData} />

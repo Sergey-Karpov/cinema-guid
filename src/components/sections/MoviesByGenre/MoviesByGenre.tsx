@@ -1,4 +1,4 @@
-import MovieCard from "@/components/ui/MovieCard/MovieCard";
+import MovieCard from "@/components/entities/MovieCard/MovieCard";
 import PageTitle from "@/components/ui/titles/PageTitle/PageTitle";
 import { MovieType } from "@/types/movieSchema";
 import { firstLetterToUpperCase } from "@/utils/helpers";

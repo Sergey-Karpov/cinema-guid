@@ -1,0 +1,15 @@
+.user-data {
+  // .user-data__inner
+  &__inner {
+    padding: 160px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+
+    @include media-mobile {
+      gap: 32px;
+      padding: 120px 0 32px;
+    }
+  }
+}

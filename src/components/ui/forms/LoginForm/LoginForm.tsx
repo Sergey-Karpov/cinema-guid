@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import MainButton from "@/components/ui/buttons/MainButton/MainButton";
 import InputField from "@/components/ui/inputs/InputField/InputField";
@@ -9,12 +9,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginDataType, LoginFormSchema } from "@/types/loginUserSchema";
 import { login, queryClient } from "@/api/api";
+import { useModal } from "@/components/ui/Modals/ModalContext";
+import useFetchProfile from "@/hooks/useFetchProfile";
 
-interface LoginFormProps {
-  onSuccessLog: () => void;
-}
+const LoginForm: React.FC = () => {
+  const { updateProfile } = useFetchProfile();
+  const { closeModal } = useModal();
+  const [errorState, setErrorState] = useState("");
 
-const LoginForm: React.FC<LoginFormProps> = ({ onSuccessLog }) => {
   const {
     register,
     handleSubmit,
@@ -27,13 +29,20 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccessLog }) => {
   const loginMutation = useMutation(
     {
       mutationFn: (user: LoginDataType) => login(user),
-      onSuccess: () => {
-        reset();
-        queryClient.invalidateQueries({ queryKey: ["users", "me"] });
-        onSuccessLog();
+      onSuccess: async () => {
+        try {
+          await updateProfile();
+          closeModal();
+          reset();
+        } catch (error) {
+          console.error("Failed to fetch profile:", error);
+        }
       },
       onError: (error: any) => {
         console.error("Login failed:", error);
+        setErrorState(
+          "Отсутствует пользователь с данным email или password, проверте пожалуйста данные и повторите вход"
+        );
       },
     },
     queryClient
@@ -54,7 +63,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccessLog }) => {
             <input
               type="text"
               placeholder="Электронная почта"
-              {...register("email")}
+              {...register("email", {
+                onChange: () => setErrorState(""),
+              })}
             />
           }
         </InputField>
@@ -66,10 +77,13 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccessLog }) => {
             <input
               type="password"
               placeholder="Пароль"
-              {...register("password")}
+              {...register("password", {
+                onChange: () => setErrorState(""),
+              })}
             />
           }
         </InputField>
+        {!!errorState && <p className="login-form__error">{errorState}</p>}
       </div>
       <MainButton text="Войти" modifier="purple" />
     </form>

@@ -6,12 +6,25 @@
     flex-direction: column;
     gap: 64px;
 
+    @include media-mobile {
+      gap: 32px;
+      padding: 120px 0 32px;
+    }
+
     ul {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       column-gap: 40px;
       row-gap: 64px;
+
+      @include media-laptop {
+        justify-content: center;
+      }
+
+      @include media-mobile {
+        row-gap: 24px;
+      }
     }
   }
 }

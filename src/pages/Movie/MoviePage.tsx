@@ -9,7 +9,7 @@ const MoviePage: React.FC = () => {
   const { movieId } = useParams();
 
   const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ["fetchMovieData"],
+    queryKey: ["fetchMovieData", movieId],
     enabled: !!movieId,
     queryFn: () =>
       movieId
@@ -21,7 +21,7 @@ const MoviePage: React.FC = () => {
     <div className="content">
       {data && (
         <>
-          <Hero movieData={data} page="movie" />
+          <Hero movieData={data} page="movie" isLoading={false} />
           <MovieDataTable movieData={data} />
         </>
       )}

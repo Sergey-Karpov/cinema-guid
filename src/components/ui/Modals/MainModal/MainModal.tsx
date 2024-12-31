@@ -5,8 +5,8 @@ import CloseButton from "@/components/ui/buttons/CloseButton/CloseButton";
 import { useModal } from "../ModalContext";
 import "./MainModal.scss";
 
-const MainModal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { isOpen, closeModal } = useModal();
+const MainModal: React.FC = () => {
+  const { isOpen, modalContent, closeModal } = useModal();
 
   useEffect(() => {
     if (isOpen) {
@@ -21,7 +21,7 @@ const MainModal: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return ReactDOM.createPortal(
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <div className="modal__inner">{children}</div>
+        <div className="modal__inner">{modalContent}</div>
         <CloseButton onClick={closeModal} />
       </div>
     </div>,

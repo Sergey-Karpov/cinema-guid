@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
 
-  // class="header__inner"
+  // .header__inner
   &__inner {
     padding: 48px 0;
     display: flex;
@@ -9,14 +9,18 @@
     align-items: center;
   }
 
-  // class="header__left"
+  // .header__left
   &__left {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @include media-mobile-large {
+      display: none;
+    }
   }
 
-  // class="header__rights"
+  // .header__rights
   &__rights {
     display: flex;
     align-items: center;

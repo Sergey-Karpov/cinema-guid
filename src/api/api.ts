@@ -40,14 +40,17 @@ export const getGenres = async (): Promise<GenreType[]> => {
 interface GetMoviesProps {
   genre?: string;
   count?: number;
+  title?: string;
 }
 
 export const getMovies = async ({
   genre,
   count,
+  title,
 }: GetMoviesProps): Promise<MovieType[]> => {
   const url = new URL(`${API_URL}movie`);
   if (genre) url.searchParams.append("genre", genre);
+  if (title) url.searchParams.append("title", title);
   if (count) url.searchParams.append("count", count.toString());
 
   const res = await fetch(url.toString());
@@ -91,14 +94,55 @@ export const login = async (loginData: LoginDataType): Promise<void> => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(loginData),
+    credentials: "include",
   })
     .then(validateResponse)
     .then((response) => response.json());
 };
 
+export const logout = async (): Promise<void> => {
+  return fetch(`${API_URL}auth/logout`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+  })
+    .then(validateResponse)
+    .then(() => undefined);
+};
+
 export const fetchProfile = (): Promise<ResponseFetchProfileType> => {
-  return fetch(`${API_URL}profile`)
+  return fetch(`${API_URL}profile`, {
+    credentials: "include",
+  })
     .then(validateResponse)
     .then((response) => response.json())
     .then((data) => ResponseFetchProfileSchema.parse(data));
+};
+
+export const addMovieToFavorites = (id: string) => {
+  return fetch(`${API_URL}favorites`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ id }),
+    credentials: "include",
+  });
+};
+
+export const getFavoriteMovies = async (): Promise<MovieType[]> => {
+  const res = await fetch(`${API_URL}favorites`, {
+    credentials: "include",
+  });
+  const moviesList = await res.json();
+  return moviesList;
+};
+
+export const removeMovieFromFavorites = async (id: number) => {
+  await fetch(`${API_URL}favorites/${id}`, {
+    method: "DELETE",
+    credentials: "include",
+  });
 };
