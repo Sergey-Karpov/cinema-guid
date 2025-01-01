@@ -14,10 +14,20 @@
 .modal {
   position: relative;
 
+  @include media-mobile {
+    width: 100%;
+  }
+
   .close-button {
     position: absolute;
     top: 0;
     right: -24px;
     transform: translateX(100%);
+
+    @include media-mobile {
+      top: 12px;
+      right: 12px;
+      transform: translateX(0);
+    }
   }
 }
