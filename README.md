@@ -14,6 +14,8 @@ CinemaGuide — это бета-версия стримингового серв
 
 Главная страница:
 Отображение случайного фильма с информацией о нём.
+![main-hero](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-hero.png)
+
 Список топ-10 фильмов по IMDb-рейтингу.
 
 Страница жанров:
