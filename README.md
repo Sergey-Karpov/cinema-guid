@@ -14,35 +14,59 @@ CinemaGuide — это бета-версия стримингового серв
 
 Главная страница:
 Отображение случайного фильма с информацией о нём.
+
 ![main-hero](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-hero.png)
 
 Список топ-10 фильмов по IMDb-рейтингу.
 
+![main-top](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-top.png)
+
 Страница жанров:
 Список доступных жанров в виде карточек.
+
+![genres](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/genres.png)
 
 Страница фильмов по жанру:
 Карточки фильмов, отфильтрованные по жанру.
 Пагинация с подгрузкой фильмов.
 
+![genres-movies](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/genres-movies.png)
+
 Страница фильма:
 Полное описание фильма.
+
+![movie](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/movie.png)
+
 Просмотр трейлера в модальном окне.
 Добавление/удаление фильма из избранного.
+
+![movie-trailer](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/movie-trailer.png)
 
 Авторизация:
 Регистрация/вход через модальное окно.
 Доступ к личному кабинету после авторизации.
 
+![register](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/register.png)
+
 Личный кабинет:
 Информация о пользователе.
+
+![user-page](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/user-page.png)
+
 Список избранных фильмов.
 Возможность выхода из аккаунта.
 
+![user-page-data](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/user-page-data.png)
+
 Поиск фильмов:
 Поиск по названию с результатами в модальном окне.
+<<<<<<< HEAD
 Технические требования
 Проект разработан с использованием:
+=======
+
+![main-search](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-search.png)
+>>>>>>> 5095e7c6fe5c92c9c56f94a36a054e5b0132b9b2
 
 ## Стек технологий:
 
