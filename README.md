@@ -6,13 +6,13 @@
 
 ## Приложение предоставляет пользователям возможность:
 
-<ol>
+<ul>
 <li>Искать фильмы.</li>
 <li>Добавлять фильмы в избранное.</li>
 <li>Просматривать категории фильмов и трейлеры.</li>
 <li>Получать рекомендации случайных фильмов.</li>
 <li>Управлять избранным списком фильмов (доступно для авторизованных пользователей).</li>
-</ol>
+</ul>
 
 Главная страница:
 Отображение случайного фильма с информацией о нём.
@@ -98,13 +98,13 @@ CinemaGuide is a beta version of a streaming service created based on the provid
 
 ## The application allows users to:
 
-<ol>
+<ul>
 <li>Search for movies.</li>
 <li>Add movies to favorites.</li>
 <li>Browse movie categories and trailers.</li>
 <li>Receive random movie recommendations.</li>
 <li>Manage the favorite movie list (available to authorized users).</li>
-</ol>
+</ul>
 
 ### Main Features:
 
