@@ -98,11 +98,13 @@ CinemaGuide is a beta version of a streaming service created based on the provid
 
 ## The application allows users to:
 
-Search for movies.
-Add movies to favorites.
-Browse movie categories and trailers.
-Receive random movie recommendations.
-Manage the favorite movie list (available to authorized users).
+<ol>
+<li>Search for movies.</li>
+<li>Add movies to favorites.</li>
+<li>Browse movie categories and trailers.</li>
+<li>Receive random movie recommendations.</li>
+<li>Manage the favorite movie list (available to authorized users).</li>
+</ol>
 
 ### Main Features:
 
