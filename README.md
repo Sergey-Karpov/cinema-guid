@@ -150,13 +150,13 @@ SCSS
 
 ## Project Structure::
 
-src/api: Logic for working with the API.
-src/assets: Static files.
-src/components: Reusable components.
-src/hooks: Reusable hooks.
-src/mock: Mock data for the project.
-src/pages: Pages of the application.
-src/store: Global store of the application.
-src/styles: Style files.
-src/types: Reusable project types.
-src/utils: Reusable functions.
+src/api: Logic for working with the API.<br>
+src/assets: Static files.<br>
+src/components: Reusable components.<br>
+src/hooks: Reusable hooks.<br>
+src/mock: Mock data for the project.<br>
+src/pages: Pages of the application.<br>
+src/store: Global store of the application.<br>
+src/styles: Style files.<br>
+src/types: Reusable project types.<br>
+src/utils: Reusable functions.<br>
