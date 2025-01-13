@@ -8,7 +8,7 @@ import { useModal } from "@/components/ui/Modals/ModalContext";
 import { RatingDisplay } from "@/components/ui/RatingDisplay/RatingDisplay";
 import PageTitle from "@/components/ui/titles/PageTitle/PageTitle";
 import { MovieType } from "@/types/movieSchema";
-import { formatRuntime } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import "./Hero.scss";
 
@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({
   const { openModal } = useModal();
 
   const startTrailer = () => {
-    openModal(<MoviePlayer url={movieData?.trailerUrl} />);
+    openModal(<MoviePlayer url={movieData?.trailerYouTubeId} />);
   };
 
   return (
@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({
                     ))}
                   </ul>
                   <span className="movie-data__runtime">
-                    {formatRuntime(movieData.runtime)}
+                    {FormateData.formatRuntime(movieData.runtime)}
                   </span>
                 </div>
                 <PageTitle text={movieData.originalTitle} />

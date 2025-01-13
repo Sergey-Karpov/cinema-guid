@@ -1,4 +1,4 @@
-import { firstLetterToUpperCase } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import "./PageTitle.scss";
 
@@ -8,7 +8,7 @@ interface PageTitleProp {
 
 const PageTitle: React.FC<PageTitleProp> = ({ text = "не указан" }) => {
   const formattedText =
-    text.trim() === "" ? "не указан" : firstLetterToUpperCase(text);
+    text.trim() === "" ? "не указан" : FormateData.firstLetterToUpperCase(text);
   return <h1 className="page-title">{formattedText}</h1>;
 };
 

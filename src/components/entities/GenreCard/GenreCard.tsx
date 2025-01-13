@@ -1,5 +1,5 @@
 import { GenreType } from "@/types/genresShema";
-import { firstLetterToUpperCase } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./GenreCard.scss";
@@ -15,7 +15,7 @@ const GenreCard: React.FC<GenreCardProps> = ({ genre }) => {
         <div className="genre-card__inner">
           <img src={`/images/genres/${genre}.png`} alt={`${genre} image`} />
           <div className="genre-card__title">
-            <span>{firstLetterToUpperCase(genre)}</span>
+            <span>{FormateData.firstLetterToUpperCase(genre)}</span>
           </div>
         </div>
       </div>

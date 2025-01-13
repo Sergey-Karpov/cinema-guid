@@ -5,15 +5,15 @@ interface MoviePlayerProps {
 }
 
 const MoviePlayer: React.FC<MoviePlayerProps> = ({ url }) => {
-  const videoId = url?.split("v=")[1]?.split("&")[0];
-  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+  const embedUrl = `https://www.youtube.com/embed/${url}?autoplay=1`;
 
   return (
     <iframe
+      title="YouTube video player"
       width={960}
       height={540}
       src={embedUrl}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
     ></iframe>
   );
 };

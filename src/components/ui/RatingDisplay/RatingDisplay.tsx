@@ -1,4 +1,4 @@
-import { roundNumber } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import "./RatingDisplay.scss";
 
@@ -33,7 +33,9 @@ export const RatingDisplay: React.FC<RatingDisplayProps> = ({ rating }) => {
           fill="white"
         />
       </svg>
-      <span className="rating-display__rate">{roundNumber(rating)}</span>
+      <span className="rating-display__rate">
+        {FormateData.roundNumber(rating)}
+      </span>
     </div>
   );
 };

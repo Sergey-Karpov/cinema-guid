@@ -59,6 +59,10 @@
           transparent 4px
         );
         transform: translateX(10px);
+
+        @include media-mobile {
+          content: none;
+        }
       }
     }
   }

@@ -1,6 +1,6 @@
 import { RatingDisplay } from "@/components/ui/RatingDisplay/RatingDisplay";
 import { MovieType } from "@/types/movieSchema";
-import { formatRuntime } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchMovieDisplay.scss";
@@ -35,7 +35,7 @@ const MovieDisplay: React.FC<ResultMovieProps> = ({ movieData, onSelect }) => {
           {movieData.genres?.slice(0, 2).map((genre, index) => (
             <span key={index}>{genre}</span>
           ))}
-          {formatRuntime(movieData.runtime)}
+          {FormateData.formatRuntime(movieData.runtime)}
         </div>
         <h4>{movieData.title}</h4>
       </div>

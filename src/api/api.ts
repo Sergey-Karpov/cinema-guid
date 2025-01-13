@@ -112,13 +112,13 @@ export const logout = async (): Promise<void> => {
     .then(() => undefined);
 };
 
-export const fetchProfile = (): Promise<ResponseFetchProfileType> => {
-  return fetch(`${API_URL}profile`, {
+export const fetchProfile = async (): Promise<ResponseFetchProfileType> => {
+  const response = await fetch(`${API_URL}profile`, {
     credentials: "include",
-  })
-    .then(validateResponse)
-    .then((response) => response.json())
-    .then((data) => ResponseFetchProfileSchema.parse(data));
+  });
+  const response_1 = await validateResponse(response);
+  const data = await response_1.json();
+  return ResponseFetchProfileSchema.parse(data);
 };
 
 export const addMovieToFavorites = (id: string) => {

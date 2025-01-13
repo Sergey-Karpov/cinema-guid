@@ -2,68 +2,47 @@
 
 ## Описание
 
-### CinemaGuide — это бета-версия стримингового сервиса, созданная по предоставленным макетам.
+CinemaGuide — это бета-версия стримингового сервиса, созданная по предоставленным макетам.
 
 ## Приложение предоставляет пользователям возможность:
 
-<ul>
-<li>Искать фильмы.</li>
-<li>Добавлять фильмы в избранное.</li>
-<li>Просматривать категории фильмов и трейлеры.</li>
-<li>Получать рекомендации случайных фильмов.</li>
-<li>Управлять избранным списком фильмов (доступно для авторизованных пользователей).</li>
-</ul>
+Искать фильмы.
+Добавлять фильмы в избранное.
+Просматривать категории фильмов и трейлеры.
+Получать рекомендации случайных фильмов.
+Управлять избранным списком фильмов (доступно для авторизованных пользователей).
 
 Главная страница:
 Отображение случайного фильма с информацией о нём.
-
 ![main-hero](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-hero.png)
 
 Список топ-10 фильмов по IMDb-рейтингу.
 
-![main-top](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-top.png)
-
 Страница жанров:
 Список доступных жанров в виде карточек.
-
-![genres](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/genres.png)
 
 Страница фильмов по жанру:
 Карточки фильмов, отфильтрованные по жанру.
 Пагинация с подгрузкой фильмов.
 
-![genres-movies](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/genres-movies.png)
-
 Страница фильма:
 Полное описание фильма.
-
-![movie](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/movie.png)
-
 Просмотр трейлера в модальном окне.
 Добавление/удаление фильма из избранного.
-
-![movie-trailer](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/movie-trailer.png)
 
 Авторизация:
 Регистрация/вход через модальное окно.
 Доступ к личному кабинету после авторизации.
 
-![register](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/register.png)
-
 Личный кабинет:
 Информация о пользователе.
-
-![user-page](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/user-page.png)
-
 Список избранных фильмов.
 Возможность выхода из аккаунта.
 
-![user-page-data](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/user-page-data.png)
-
 Поиск фильмов:
 Поиск по названию с результатами в модальном окне.
-
-![main-search](https://github.com/Sergey-Karpov/cinema-guid/blob/main/screens/main-search.png)
+Технические требования
+Проект разработан с использованием:
 
 ## Стек технологий:
 
@@ -79,16 +58,16 @@ SCSS
 
 ## Структура проекта:
 
-src/api: Логика для работы с API.<br>
-src/assets: Статичные файлы.<br>
-src/components: Повторно используемые компоненты.<br>
-src/hooks: Повторно хуки проекта.<br>
-src/mock: Моковые данные проекта.<br>
-src/pages: Страницы приложения.<br>
-src/store: Хранилице глобальных store приложения.<br>
-src/styles: Файлы стилей.<br>
-src/types: Переиспользуемые типы проекта.<br>
-src/utils: Переиспользуемые функции.<br>
+src/api: Логика для работы с API.
+src/assets: Статичные файлы.
+src/components: Повторно используемые компоненты.
+src/hooks: Повторно хуки проекта.
+src/mock: Моковые данные проекта.
+src/pages: Страницы приложения.
+src/store: Хранилице глобальных store приложения.
+src/styles: Файлы стилей.
+src/types: Переиспользуемые типы проекта.
+src/utils: Переиспользуемые функции.
 
 # En
 
@@ -98,13 +77,11 @@ CinemaGuide is a beta version of a streaming service created based on the provid
 
 ## The application allows users to:
 
-<ul>
-<li>Search for movies.</li>
-<li>Add movies to favorites.</li>
-<li>Browse movie categories and trailers.</li>
-<li>Receive random movie recommendations.</li>
-<li>Manage the favorite movie list (available to authorized users).</li>
-</ul>
+Search for movies.
+Add movies to favorites.
+Browse movie categories and trailers.
+Receive random movie recommendations.
+Manage the favorite movie list (available to authorized users).
 
 ### Main Features:
 
@@ -154,13 +131,13 @@ SCSS
 
 ## Project Structure::
 
-src/api: Logic for working with the API.<br>
-src/assets: Static files.<br>
-src/components: Reusable components.<br>
-src/hooks: Reusable hooks.<br>
-src/mock: Mock data for the project.<br>
-src/pages: Pages of the application.<br>
-src/store: Global store of the application.<br>
-src/styles: Style files.<br>
-src/types: Reusable project types.<br>
-src/utils: Reusable functions.<br>
+src/api: Logic for working with the API.
+src/assets: Static files.
+src/components: Reusable components.
+src/hooks: Reusable hooks.
+src/mock: Mock data for the project.
+src/pages: Pages of the application.
+src/store: Global store of the application.
+src/styles: Style files.
+src/types: Reusable project types.
+src/utils: Reusable functions.

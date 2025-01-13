@@ -1,6 +1,6 @@
 import SectionTitle from "@/components/ui/titles/SectionTitle/SectionTitle";
 import { MovieType } from "@/types/movieSchema";
-import { formatCurrencyUSD } from "@/utils/helpers";
+import { FormateData } from "@/utils/helpers";
 import React from "react";
 import "./MovieDataTable.scss";
 
@@ -29,7 +29,7 @@ const MovieDataTable: React.FC<MovieDataProps> = ({ movieData }) => {
               </div>
               <span className="movie-table__value">
                 {movieData.budget !== null
-                  ? formatCurrencyUSD(movieData.budget)
+                  ? FormateData.formatCurrencyUSD(movieData.budget)
                   : "нет информации"}
               </span>
             </li>
@@ -39,7 +39,7 @@ const MovieDataTable: React.FC<MovieDataProps> = ({ movieData }) => {
               </div>
               <span className="movie-table__value">
                 {movieData.revenue !== null
-                  ? formatCurrencyUSD(movieData.revenue)
+                  ? FormateData.formatCurrencyUSD(movieData.revenue)
                   : "нет информации"}
               </span>
             </li>
